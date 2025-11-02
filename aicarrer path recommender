@@ -1,0 +1,61 @@
+def career_recommender():
+    print("AI CAREER PATH RECOMMENDER")
+    print("--------------------------------------------------")
+
+    # Take user inputs
+    skill = input("Enter your main skill or programming language: ").lower()
+    interest = input("Enter your main area of interest (e.g., web, data, ai, cloud, design, cybersecurity, management): ").lower()
+    personality = input("Describe your personality type (e.g., creative, analytical, problem-solver, leader): ").lower()
+
+    print("\nAnalyzing your profile...\n")
+
+    # --- Rule-Based Reasoning System ---
+    if any(x in skill for x in ["python", "r", "sql"]) and any(x in interest for x in ["data", "analytics", "ai", "ml", "machine learning"]):
+        print("Suggested Career Path: Data Analyst / Data Scientist / Machine Learning Engineer")
+        print("Tip: Focus on Python, SQL, ML algorithms, and visualization tools like Power BI or Tableau.")
+
+    elif "python" in skill and "deep learning" in interest:
+        print("Suggested Career Path: Deep Learning Engineer / AI Researcher")
+        print("Tip: Learn TensorFlow, PyTorch, and study CNNs and RNNs for model development.")
+
+    elif any(x in skill for x in ["html", "css", "javascript", "php", "react", "angular", "node", "django", "flask"]) and "web" in interest:
+        print("Suggested Career Path: Full-Stack Web Developer / Frontend Engineer")
+        print("Tip: Master React, Node.js, and frameworks like Django or Flask.")
+
+    elif any(x in skill for x in ["java", "kotlin", "swift", "flutter"]) and any(x in interest for x in ["apps", "mobile", "android", "ios"]):
+        print("Suggested Career Path: Mobile App Developer (Android/iOS)")
+        print("Tip: Learn mobile UI/UX and build apps using Flutter or Android Studio.")
+
+    elif any(x in skill for x in ["networking", "linux", "security", "c++"]) and "security" in interest:
+        print("Suggested Career Path: Cybersecurity Specialist / Ethical Hacker")
+        print("Tip: Learn penetration testing, firewalls, and ethical hacking tools like Kali Linux.")
+
+    elif any(x in skill for x in ["aws", "azure", "devops", "docker", "kubernetes", "cloud"]) or "cloud" in interest:
+        print("Suggested Career Path: Cloud Engineer / DevOps Engineer")
+        print("Tip: Gain certifications in AWS, Azure, or Google Cloud and learn CI/CD pipelines.")
+
+    elif any(x in skill for x in ["unity", "unreal", "c#", "blender"]) or "game" in interest:
+        print("Suggested Career Path: Game Developer / Game Designer")
+        print("Tip: Work on 2D/3D games using Unity or Unreal Engine, and learn 3D modeling tools.")
+
+    elif any(x in skill for x in ["photoshop", "illustrator", "canva", "figma", "after effects"]) or "design" in interest or "creative" in personality:
+        print("Suggested Career Path: Graphic Designer / UI-UX Designer / Animator")
+        print("Tip: Focus on design principles, Adobe Creative Suite, and UI/UX wireframing tools.")
+
+    elif any(x in interest for x in ["management", "business", "leadership"]) or "leader" in personality:
+        print("Suggested Career Path: Product Manager / Business Analyst / Project Manager")
+        print("Tip: Learn project management tools (JIRA, Agile), data interpretation, and communication skills.")
+
+    elif any(x in skill for x in ["arduino", "raspberry", "iot", "embedded", "c"]) and "hardware" in interest:
+        print("Suggested Career Path: Robotics Engineer / IoT Developer / Embedded Systems Engineer")
+        print("Tip: Learn sensor integration, embedded C, and robotics frameworks like ROS.")
+
+    else:
+        print("Suggested Career Path: General Software Developer / IT Support / Tech Consultant")
+        print("Tip: Explore multiple domains to discover what excites you the most!")
+
+    print("\nThank you for using the AI Career Path Recommender!")
+
+
+if __name__ == "__main__":
+    career_recommender()
